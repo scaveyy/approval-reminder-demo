@@ -1,0 +1,18 @@
+{
+  "request": {
+    "request_id": "REQ-101",
+    "requester": "alex",
+    "approver": "morgan",
+    "created_at": "2026-01-10T09:00:00+00:00",
+    "due_at": "2026-01-12T09:00:00+00:00"
+  },
+  "decision": {
+    "event_id": "EVT-201",
+    "request_id": "REQ-101",
+    "kind": "approve",
+    "actor": "morgan",
+    "expected_revision": 0,
+    "at": "2026-01-12T10:00:00+00:00"
+  },
+  "check_at": "2026-01-12T09:30:00+00:00"
+}
