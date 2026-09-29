@@ -23,6 +23,10 @@ The example checks an overdue pending request, then applies an approval. A remin
 
 The 14 tests cover those rules, including self approval, stale revisions, changed event content, missing timezones, and reminder suppression. GitHub Actions runs the tests on pushes and pull requests.
 
-## What this does not prove
+## Scope
 
-This is a local state machine, not a deployed approval service. Names and roles in the example are supplied as input; there is no authentication. The code proposes reminders but does not send them or save the sent-key ledger. A real system would need durable storage, access checks, concurrency control at the database, delivery receipts, and a recheck immediately before sending. This example does not claim those controls or any result from another project.
+A local state machine with fictional data. It proposes reminders but does not send them, and it has no login or database.
+
+## How this maps to a production build
+
+I build approval and reminder flows in production with Power Apps, SharePoint and Power Automate. There, the state lives in SharePoint or Dataverse and Power Automate sends the reminders. This repo shows the rules those flows have to respect (stale decisions, replays, no duplicate reminders) in a form anyone can run.
